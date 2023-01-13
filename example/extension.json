@@ -1,0 +1,9 @@
+{
+  "name": "My Fav Extension",
+  "description": "This is a cool extension",
+  "fileRenderers": [{"ext": "txt", "path": "/txt/"}],
+  "fileIcons": [{"ext": "jnthn", "path": "/jonathan.png"}, {"ext": "bee", "path": "/tool/bee.png"}],
+  "tools": [{"title": "My Tool", "icon": "/bee.png", "path": "/tool/"}],
+  "commands": [{"title": "Create Bee", "description": "Create a new .bee file", "icon": "bee/bee.png", "path": "/bee/"}],
+  "contextMenuItems": [{"title": "Create a Bee", "icon": "/bee/bee.png", "path": "/bee/"}]
+}

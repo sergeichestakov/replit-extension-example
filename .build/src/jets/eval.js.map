@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/jets/eval.ts"],
+  "sourcesContent": ["import { request } from \"src/util/talk\";\n\nlet warned = false;\n\nexport async function evalCode({ code }) {\n  if (!warned) {\n    console.warn(\"@replit/extensions: evalCode() will be deprecated very soon\");\n    warned = true;\n  }\n\n  return request({\n    type: \"eval\",\n    code,\n  });\n}\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA,kBAAwB;AAExB,IAAI,SAAS;AAEb,wBAA+B,EAAE,QAAQ;AACvC,MAAI,CAAC,QAAQ;AACX,YAAQ,KAAK;AACb,aAAS;AAAA;AAGX,SAAO,yBAAQ;AAAA,IACb,MAAM;AAAA,IACN;AAAA;AAAA;",
+  "names": []
+}

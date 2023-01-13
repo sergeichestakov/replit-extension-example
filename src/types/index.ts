@@ -112,6 +112,14 @@ export interface FloatingPaneGroup {
   rect: Rect;
 }
 
+type Source = 'workspace' | 'extension';
+
+export type Event = {
+  type: 'string';
+  source: Source;
+  data?: any;
+}
+
 export type ExtensionPortAPI = {
   // misc
   handshake: (args: { permissions: Array<string> }) => void;
@@ -155,6 +163,11 @@ export type ExtensionPortAPI = {
   removeFloatingPanesByType(paneType: string): Promise<void>;
   getLayoutState(): Promise<LayoutData>;
   setLayoutState(state: LayoutData): Promise<void>;
+
+  // Events
+
+  emitEvent(event: Omit<Event, 'source'>): void;
+  onWorkspaceEvent(listener: (event: Event) => void): Promise<() => void>;
 
   // jets (will be deprecated)
 

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/index.ts"],
+  "sourcesContent": ["import { registerMessageListener, handshake } from \"src/util/talk\";\nimport { debug, setDebugMode } from \"src/util/log\";\nimport { extensionPort } from \"./util/comlink\";\nexport * from \"./api\";\nexport * from \"./jets\";\nexport * from \"./util/log\";\nexport { extensionPort };\nexport * from './types'\n\nexport async function init({\n  permissions = [],\n  timeout = 1000,\n  debug = false,\n}: {\n  permissions?: string[];\n  timeout?: number;\n  debug?: boolean;\n}) {\n  setDebugMode(debug);\n  const disposeMessageListener = registerMessageListener();\n\n  try {\n    await handshake({ permissions, timeout });\n  } catch (e) {\n    console.error(e);\n    disposeMessageListener();\n    throw e;\n  }\n\n  return () => {\n    disposeMessageListener();\n  };\n}\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA,kBAAmD;AACnD,iBAAoC;AACpC,qBAA8B;AAC9B,oBAAc;AACd,oBAAc;AACd,oBAAc;AAEd,oBAAc;AAEd,oBAA2B;AAAA,EACzB,cAAc;AAAA,EACd,UAAU;AAAA,EACV,gBAAQ;AAAA,GAKP;AACD,+BAAa;AACb,QAAM,yBAAyB;AAE/B,MAAI;AACF,UAAM,2BAAU,EAAE,aAAa;AAAA,WACxB,GAAP;AACA,YAAQ,MAAM;AACd;AACA,UAAM;AAAA;AAGR,SAAO,MAAM;AACX;AAAA;AAAA;",
+  "names": []
+}

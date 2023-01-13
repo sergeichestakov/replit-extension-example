@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/jets/graphql.ts"],
+  "sourcesContent": ["import { request } from \"src/util/talk\";\n\nlet queryWarned = false;\nexport async function queryGraphql({ query, variables }) {\n  if (!queryWarned) {\n    console.warn(\"@replit/extensions: queryGraphql() will be deprecated very soon\");\n    queryWarned = true;\n  }\n\n  return request({\n    type: \"queryGraphql\",\n    query,\n    variables,\n  });\n}\n\nlet mutateWarned = false;\nexport async function mutateGraphql({ mutation, variables }) {\n  if (!mutateWarned) {\n    console.warn(\"@replit/extensions: mutateGraphql() will be deprecated very soon\");\n    mutateWarned = true;\n  }\n\n  return request({\n    type: \"mutateGraphql\",\n    mutation,\n    variables,\n  });\n}\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA,kBAAwB;AAExB,IAAI,cAAc;AAClB,4BAAmC,EAAE,OAAO,aAAa;AACvD,MAAI,CAAC,aAAa;AAChB,YAAQ,KAAK;AACb,kBAAc;AAAA;AAGhB,SAAO,yBAAQ;AAAA,IACb,MAAM;AAAA,IACN;AAAA,IACA;AAAA;AAAA;AAIJ,IAAI,eAAe;AACnB,6BAAoC,EAAE,UAAU,aAAa;AAC3D,MAAI,CAAC,cAAc;AACjB,YAAQ,KAAK;AACb,mBAAe;AAAA;AAGjB,SAAO,yBAAQ;AAAA,IACb,MAAM;AAAA,IACN;AAAA,IACA;AAAA;AAAA;",
+  "names": []
+}

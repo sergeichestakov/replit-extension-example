@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../example/vite.config.js"],
+  "sourcesContent": ["import { defineConfig } from 'vite';\nimport react from '@vitejs/plugin-react';\n\n// https://vitejs.dev/config/\nexport default defineConfig({\n  plugins: [react()],\n  server: {\n    host: '0.0.0.0',\n  }\n})\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA,kBAA6B;AAC7B,0BAAkB;AAGlB,IAAO,sBAAQ,8BAAa;AAAA,EAC1B,SAAS,CAAC;AAAA,EACV,QAAQ;AAAA,IACN,MAAM;AAAA;AAAA;",
+  "names": []
+}

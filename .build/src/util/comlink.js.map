@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/util/comlink.ts"],
+  "sourcesContent": ["import * as Comlink from \"comlink\";\nimport { ExtensionPortAPI } from \"src/types\";\n\nexport const extensionPort = Comlink.wrap<ExtensionPortAPI>(\n  Comlink.windowEndpoint(self.parent, self, \"*\")\n);\n\nexport const proxy = Comlink.proxy;"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA,cAAyB;AAGlB,MAAM,gBAAgB,QAAQ,KACnC,QAAQ,eAAe,KAAK,QAAQ,MAAM;AAGrC,MAAM,QAAQ,QAAQ;",
+  "names": []
+}

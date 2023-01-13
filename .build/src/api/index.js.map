@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/api/index.ts"],
+  "sourcesContent": ["import * as fs from \"./fs\";\nimport * as layout from \"./layout\";\nimport * as replDb from \"./replDb\";\n\nexport { layout, fs, replDb };\n\n// deprecate this after migrating existing extensions\nexport * from \"./fs\";\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,SAAoB;AACpB,aAAwB;AACxB,aAAwB;AAKxB,oBAAc;",
+  "names": []
+}

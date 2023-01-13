@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/util/log.ts"],
+  "sourcesContent": ["let debugMode = false;\n\nexport function debug(msg: any) {\n  if (!debugMode) {\n    return;\n  }\n\n  console.log(msg);\n}\n\nexport function setDebugMode(mode: boolean) {\n  debugMode = mode;\n}\n"],
+  "mappings": ";;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA,IAAI,YAAY;AAET,eAAe,KAAU;AAC9B,MAAI,CAAC,WAAW;AACd;AAAA;AAGF,UAAQ,IAAI;AAAA;AAGP,sBAAsB,MAAe;AAC1C,cAAY;AAAA;",
+  "names": []
+}

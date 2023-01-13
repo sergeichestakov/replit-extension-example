@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/api/replDb.ts"],
+  "sourcesContent": ["import { extensionPort } from \"src/util/comlink\";\n\n/**\n * Sets the value for a given key\n */\nexport async function set(args: { key: string, value: any }) {\n  return extensionPort.setReplDbValue(args.key, args.value);\n}\n\n/**\n * Returns a value associated with the given key\n */\nexport async function get(args: { key: string }) {\n  return extensionPort.getReplDbValue(args.key);\n}\n\n/**\n * Lists keys in the replDb. Accepts an optional `prefix`, which filters for keys beginning with the given prefix.\n */\nexport async function list(args: { prefix: string }) {\n  return extensionPort.listReplDbKeys(args.prefix);\n}\n\n/**\n * Deletes a key in the replDb.\n */\nexport async function del(args: { key: string }) {\n  return extensionPort.deleteReplDbKey(args.key);\n}"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,qBAA8B;AAK9B,mBAA0B,MAAmC;AAC3D,SAAO,6BAAc,eAAe,KAAK,KAAK,KAAK;AAAA;AAMrD,mBAA0B,MAAuB;AAC/C,SAAO,6BAAc,eAAe,KAAK;AAAA;AAM3C,oBAA2B,MAA0B;AACnD,SAAO,6BAAc,eAAe,KAAK;AAAA;AAM3C,mBAA0B,MAAuB;AAC/C,SAAO,6BAAc,gBAAgB,KAAK;AAAA;",
+  "names": []
+}
